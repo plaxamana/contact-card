@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.card {
+  background: #000;
+  color: #fff;
+  padding: 3em;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar__img {
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.header__name {
+  font-size: 2.5rem;
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socialsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.socialWrapper {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.socialWrapper__name {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+}
+
+.content__email {
+  display: inline-block;
+  background: #cc001c;
+  padding: 1em 1.75em;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(0) translateX(0);
+  transition: all 300ms;
+}
+
+.content__email:hover {
+  transform: translateY(-5px) translateX(5px);
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 620px) {
+  .avatar {
+    position: relative;
+  }
+
+  .avatar::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #262525;
+    border-radius: 10px;
+    right: -35px;
+  }
+
+  .card {
+    display: flex;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  .content {
+    margin-left: 4em;
+  }
+
+  .header {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .socialsContainer {
+    flex-direction: row;
+    margin-bottom: 1em;
+  }
+
+  .socialWrapper {
+    text-align: left;
+    margin-right: 1em;
+  }
+
+  .content__email {
+    align-self: flex-start;
+  }
+}
